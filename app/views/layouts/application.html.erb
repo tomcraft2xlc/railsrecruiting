@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recruiting</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+ 
+    <style type="text/css">
+       	#map_canvas { height: 100% }
+	   	body { height: 100%; margin: 0; padding: 0 }
+	    html { height: 100% }
+	    .container-fluid{height: 100%}
+	    .row-fluid{height: 100%}
+	    .span8{height: 100%}
+    
+    </style>
+</head>
+<body>
+
+	<%= render 'layouts/header' %>
+
+	<div id="user_nav">
+    	<% if company_signed_in? %>
+    		Signed in as <%= current_company.email %>. 
+    	<!-- Viene fatto method: delete perchè altrimenti quando clicco sul link viene fattto un GET e quindi
+    	non corrisponde all'action destroy del resource -->
+    		<%= link_to "Sign out", signout_path, method: "delete" %>
+  		<% else %>
+    		<%= link_to "Sign in", signin_path %>
+  		<% end %>
+      <% if user_signed_in? %>
+        Signed in as <%= current_user.email %>. 
+      <!-- Viene fatto method: delete perchè altrimenti quando clicco sul link viene fattto un GET e quindi
+      non corrisponde all'action destroy del resource -->
+        <%= link_to "Sign out", userSignout_path, method: "delete" %>
+      <% else %>
+        <%= link_to "Sign in", userSignin_path %>
+      <% end %>
+	</div>	
+
+	<div class="container">
+		<%= yield %>
+
+	</div">
+	
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: jobs
+#
+#  id                 :integer          not null, primary key
+#  title              :string(255)
+#  company_id         :string(255)
+#  address            :string(255)
+#  latitude           :float
+#  longitude          :float
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  jobDescription     :text
+#  companyDescription :text
+#  desiredSkills      :text
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  company_id: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  title: MyString
+  company_id: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5

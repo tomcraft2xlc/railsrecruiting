@@ -1,0 +1,89 @@
+<!--<div class="row">
+	<div class="span6 offset3"> 
+
+		<h1>Jobs</h1>
+		<div class = "row">
+		<div class="span4">
+		<%= form_for @job, :html => {:class => "form-horizontal"} do |f| %>
+			<% if @job.errors.any? %>
+				<div class = "error_messages">
+					<h2>Form in invalid</h2>
+					<ul>
+						<% @job.errors.full_messages.each do |message| %>
+							<li><%= message %></li>
+						<%end%>
+					</ul>
+				</div>
+			<%end%>
+
+			<div class="control-group">
+				<%= f.label :title, :class => "control-label" %>
+				<div class="controls">
+					<%= f.text_field :title %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :address, :class => "control-label" %>
+				<div class="controls">
+					<%= f.text_field :address %>
+				</div>
+			</div>
+			<%= f.text_area :address, :class => "redactor", :rows => 3, :cols => 20 %>
+			<%= f.submit "Create Account", class: "btn btn-large btn-primary" %>
+		<% end %>
+		</div>
+			<div class="span8">
+				<p>Ciaooo</p>
+			</div>
+	    </div>
+	</div>
+</div> -->
+
+<!--
+<div class="row">
+	<div class="span6">
+<form>
+  <fieldset>
+    <legend>Legend</legend>
+    <label>Label name</label>
+    <input type="text" placeholder="Type something…">
+    <span class="help-block">Example block-level help text here.</span>
+    <label class="checkbox">
+      <input type="checkbox"> Check me out
+    </label>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+</div>
+<div class="span6">
+	<p>lgjjfdjghjfdhgjfhgjhfdjghjfdhgjfdhgjfhj
+		fdkjgkhfdgjfdhgjfdjghjfdhgjfdhgdfgfdgfdggggggggdfgfdgdfgdfgfdgdf</p>
+</div>
+</div>
+-->
+<%= form_for @job do |f| %>
+	<fieldset>
+		<legend>Inserisci dati</legend>
+		<div class = "row">
+			<div class = "span6">
+				<%= f.label :title, ("Titolo lavoro") %>
+				<%= f.text_field :title %>
+				<%= f.label :address, ("Luogo") %>
+				<%= f.text_field :address %>
+				<%= f.label :jobDescription, ("Descrizione lavoro") %>
+				<%= f.text_area :jobDescription, class: "redactor", rows: 6, cols: 20 %>
+				</p>
+				<%= f.label :companyDescription, ("Chi siamo") %>
+				<%= f.text_area :companyDescription, class: "redactor", rows: 6, cols: 20 %>
+				</p>
+				<%= f.submit "Aggiungi lavoro", class: "btn btn-primary" %>
+			</div>
+		</div>
+	</fieldset>
+<% end %>
+
+
+
+
+
+

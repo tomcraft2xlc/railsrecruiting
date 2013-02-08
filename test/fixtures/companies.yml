@@ -1,0 +1,45 @@
+# == Schema Information
+#
+# Table name: companies
+#
+#  id                     :integer          not null, primary key
+#  name                   :string(255)
+#  email                  :string(255)
+#  city                   :string(255)
+#  street                 :string(255)
+#  number                 :integer
+#  cap                    :integer
+#  link                   :string(255)
+#  description            :text
+#  funded                 :date
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  password_digest        :string(255)
+#  remember_token         :string(255)
+#  password_reset_token   :string(255)
+#  password_reset_sent_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  city: MyString
+  street: MyString
+  number: 1
+  cap: 1
+  link: MyString
+  description: MyText
+  funded: 2013-01-18
+
+two:
+  name: MyString
+  email: MyString
+  city: MyString
+  street: MyString
+  number: 1
+  cap: 1
+  link: MyString
+  description: MyText
+  funded: 2013-01-18

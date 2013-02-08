@@ -1,0 +1,26 @@
+<header class="navbar navbar-inverse navbar-static-top">
+	<div class ="navbar-inner">
+		<!-- <div class="container"> -->
+			<a class = "brand" href="#">Recruiting</a>
+			<ul class = "nav pull-right">
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Help", help_path %></li>
+				<li><%= link_to "About", "#" %></li>
+				<li><%= link_to "Contact", "#" %></li>
+				<% if company_signed_in? %>
+					<li><%= link_to "Logged", current_company %></li>
+				<%else%>
+					<li><%= link_to "Sign Up Company", new_company_path %></li>
+					<li><%= link_to "Sign In Company", signin_path %></li>
+				<%end%>
+
+				<% if user_signed_in? %>
+					<li><%= link_to "User Logged", current_user %></li>
+				<%else%>
+					<li><%= link_to "Sign Up User", new_user_path %></li>
+					<li><%= link_to "Sign In User", userSignin_path %></li>
+				<%end%>
+			</ul>
+		<!-- </div> -->
+	</div>
+</header>

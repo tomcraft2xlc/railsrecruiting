@@ -1,0 +1,17 @@
+<h1>User Sign In</h1>
+
+<%= form_tag userCreateSessionSignin_path do %>
+  <p>
+    <%= label_tag :email_user %><br />
+    <%= text_field_tag :email_user, params[:email_user] %>
+  </p>
+  <p>
+    <%= label_tag :password_user %><br />
+    <%= password_field_tag :password_user %>
+  </p>
+  	<%= label_tag :remember_me_user %>
+    <%= check_box_tag :remember_me_user, 1, params[:remember_me_user] %>
+  </p>
+  <%= submit_tag "Sign In",  class: "btn btn-primary"%>
+ 
+<% end %>
